@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .audio-sample {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        .description {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sample voice synthesized via proposal model</h1>
+
+    <section>
+        <h2>Overview</h2>
+        <p>
+            You can listen synthesized speech-laugh.
+            <br>
+            From Sample 1 to Sample 4 are introduced in paper but the others are not.
+        </p>
+    </section>
+
+    <section class="audio-sample">
+        <h2>Sample 1: synthesized speech-laugh in closed condition via pretraining female model with a high naturalness score in Figure 5 (a)</h2>
+        <audio id="audio1" src="wav/148.wav" preload="auto"></audio>
+        <button onclick="document.getElementById('audio1').play()">Play</button>
+        <p class="description">
+            Score: 4.15 out of 5 in naturalness
+            <br>
+            The input text: "h i cl k a k a cl t e r u y o" in Japanese ("It's stuck")
+        </p>
+    </section>
+
+    <section class="audio-sample">
+        <h2>Sample 2: synthesized speech-laugh in closed condition via pretraining female model with a high laughter-likeness score in Figure 5 (b)</h2>
+        <audio id="audio2" src="wav/146.wav" preload="auto"></audio>
+        <button onclick="document.getElementById('audio2').play()">Play</button>
+        <p class="description">
+            Score: 4.00 out of 5 in laughter-likeness
+            <br>
+            The input text: "d o sh i t a N d a r o n e" in Japanese ("I wonder what's going on")
+        </p>
+    </section>
+
+    <section class="audio-sample">
+        <h2>Sample 3: synthesized speech-laugh via pretraining model with a low CER in Figure 6 (a)</h2>
+        <audio id="audio3" src="wav/namae_sl_w_pretrain.wav" preload="auto"></audio>
+        <button onclick="document.getElementById('audio3').play()">Play</button>
+        <p class="description">
+            CER: 0
+            <br>
+            The input text: "n a m a e o k a i t e o k i n a s a i" in Japanese ("Write your name down")
+        </p>
+    </section>
+
+    <section class="audio-sample">
+        <h2>Sample 4: synthesized speech-laugh via no-pretraining model with a high CER in Figure 6 (b)</h2>
+        <audio id="audio4" src="wav/namae_sl_wo_pretrain.wav" preload="auto"></audio>
+        <button onclick="document.getElementById('audio4').play()">Play</button>
+        <p class="description">
+            CER: 0.90
+            <br>
+            The input text: "n a m a e o k a i t e o k i n a s a i" in Japanese ("Write your name down")
+        </p>
+    </section>
+
+    <section class="audio-sample">
+        <h2>Sample 5: synthesized speech-laugh in open condition via pretraining female model with a high naturalness score</h2>
+        <audio id="audio5" src="wav/198.wav" preload="auto"></audio>
+        <button onclick="document.getElementById('audio5').play()">Play</button>
+        <p class="description">
+            Score: 3.50 out of 5 in naturalness
+            <br>
+            The input text: "m a cl t e m a cl t e m a cl t e" in Japanese ("Wait wait wait")
+        </p>
+    </section>
+
+    <section class="audio-sample">
+        <h2>Sample 6: synthesized speech-laugh in open condition via pretraining male model with a high laughter-likeness score</h2>
+        <audio id="audio6" src="wav/270.wav" preload="auto"></audio>
+        <button onclick="document.getElementById('audio6').play()">Play</button>
+        <p class="description">
+            Score: 3.76 out of 5 in laughter-likeness
+            <br>
+            The input text: "u w a" in Japanese ("Wow")
+        </p>
+    </section>
+</body>
+</html>
