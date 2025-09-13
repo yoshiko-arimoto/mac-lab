@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>demo scream</title>
+  <link rel="stylesheet" href="test4.css">
+</head>
+<body>
+  <h1>The effect of data augmentation of scream using speaker conversion for scream synthesis</h1>
+
+  <!-- 声質変換ブロック -->
+  <section>
+    <!--<h2>叫び声の話者変換</h2>-->
+    <h2>IV. SPEAKER CONVERSION FOR SCREAM</h2>
+    <!--<p>CycleGAN-VC2で叫び声を話者変換した例です。</p>-->
+    <p>Demo of converted screams using CycleGAN-VC2.</p>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <!--<th>話者Aの叫び声</th>-->
+          <th>source speaker's screams</th>
+          <!--<th>話者Bの叫び声</th>-->
+          <th>target speaker's screams</th>
+          <!--<th>話者変換音声（A → B）</th>-->
+          <th>converted screams</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><audio controls src="audio/vc/A1.wav"></audio></td>
+          <td><audio controls src="audio/vc/B1.wav"></audio></td>
+          <td><audio controls src="audio/vc/A1-B1.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><audio controls src="audio/vc/A2.wav"></audio></td>
+          <td><audio controls src="audio/vc/B2.wav"></audio></td>
+          <td><audio controls src="audio/vc/A2-B2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><audio controls src="audio/vc/A3.wav"></audio></td>
+          <td><audio controls src="audio/vc/A3-B3.wav"></audio></td>
+          <td><audio controls src="audio/vc/B3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><audio controls src="audio/vc/A4.wav"></audio></td>
+          <td><audio controls src="audio/vc/B4.wav"></audio></td>
+          <td><audio controls src="audio/vc/A4-B4.wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 合成音声ブロック -->
+  <section>
+    <!--<h2>叫び声合成</h2>-->
+    <h2>V. SCREAM SYNTHESIS</h2>
+    <!--<p>VITSで叫び声を合成した音声の例です。</p>-->
+    <p>Demo of synthesized screams using VITS.</p>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <!--<th>話者Cの叫び声</th>-->
+          <th>human's screams</th>
+          <!--<th>合成した叫び声</th>-->
+          <th>synthesized screams</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><audio controls src="audio/syn/C1.wav"></audio></td>
+          <td><audio controls src="audio/syn/X1.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><audio controls src="audio/syn/C2.wav"></audio></td>
+          <td><audio controls src="audio/syn/X2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><audio controls src="audio/syn/C3.wav"></audio></td>
+          <td><audio controls src="audio/syn/X3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><audio controls src="audio/syn/C4.wav"></audio></td>
+          <td><audio controls src="audio/syn/X4.wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

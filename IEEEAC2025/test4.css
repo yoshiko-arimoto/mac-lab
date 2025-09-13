@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  section {
+    margin-top: 40px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  audio {
+    width: 200px;
+    max-width: 90%;
+  }
+  
